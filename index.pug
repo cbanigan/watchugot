@@ -1,0 +1,20 @@
+// Form Mixin
+mixin form
+    .form
+      h2 Login to your account
+      form
+        input(type='text' placeholder='Username')
+        input(type='password' placeholder='Password')
+        button Login
+// Input Mixin
+mixin input(type, placeholder)
+  input(type=type
+        placeholder=placeholder)
+
+// Button Mixin
+mixin button(value)
+  button=value
+  
+
+// Form Module
++form
