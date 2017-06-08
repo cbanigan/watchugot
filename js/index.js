@@ -1,6 +1,5 @@
 // address of server
-var serverAddress = "http://192.168.21.48:8082/";
-
+var serverAddress = "http://127.0.0.1:5000/";
 var tableData = [];
 var table = document.getElementById("eventTable");
 
@@ -87,20 +86,3 @@ function Ctrl($http) {
         })  
     };    
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
