@@ -119,6 +119,8 @@ footer {
 
 .item-table .add-button{
     flex: 1;
+    background: #33b5e5;
+    color: #ffffff;
 }
 
 .item-table-history {
@@ -135,4 +137,6 @@ footer {
 
 .item-table-history .row .delete-button{
     flex: 1;
+    background: #33b5e5;
+    color: #ffffff;
 }
