@@ -1,0 +1,35 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body ng-app="app">
+	<div ng-controller="Ctrl as vm">
+		add item
+		<input type="text" ng-model="vm.newItem"><button ng-click="vm.addItem(vm.newItem)">Add Item</button>
+		add person
+		<input type="text" ng-model="vm.personName"><button ng-click="vm.addPerson(vm.personName)">add Person</button>
+
+		test variable: {{vm.test}}
+		person selected = {{vm.personSelected.name}} | List ==> {{vm.personSelected.items}}
+
+		<div>
+			Item List
+			<ul>
+				<li ng-repeat="item in vm.items">
+					{{item}} <button ng-click="vm.addToPerson(item)">Add to current selected</button>
+				</li>
+			</ul>
+		</div>
+		<div>
+		People List
+		<ul>
+			<li ng-repeat="user in vm.people">
+				{{user.name}} | List ==> {{user.items}} <button ng-click="vm.selectPerson(user.name)">Select {{user.name}}</button>
+			</li>
+		</ul>
+		</div>
+	</div>
+</body>
+</html>
