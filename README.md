@@ -21,9 +21,11 @@ node - https://nodejs.org/en/
 Webserver
 ```bash
 npm install http-server -g
+npm install uuid
 ```
 
 ### Starting the Engine
+Switch to a virtual enviorment with the source command, run server.py for flask services, and then start a local http-server.
 ```bash
 cd watchugot/server/server
 source bin/activate

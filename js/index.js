@@ -67,7 +67,7 @@ function Ctrl($http) {
         
         
         // ADD LATER to http.post "+ "/" + eventItems"
-        $http.post(serverAddress + "addEvent/" + eventName + "/" + JSON.stringfy(eventItems)).then(function(data) {
+        $http.post(serverAddress + "addEvent/" + eventName + "/" + JSON.stringify(eventItems)).then(function(data) {
             console.log("Data from Server: " + JSON.stringify(data));
         }, function(err) {
             console.log("ERROR: " + JSON.stringify(err));
