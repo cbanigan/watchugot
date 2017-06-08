@@ -24,18 +24,26 @@ function addItem() {
         return false;
     }
     
-    if(tableData.length == 0 && table.rows.length == 1) {
-        table.deleteRow(0);
-    }
-    
     // add new item to data array
     tableData.push(newItem.value);
     
     // insert new row into table
+    
+    console.log("here1");
+    
+    var div = document.createElement('div');
+    div.className = 'row';
+    div.innerHTML= '<p class="new-item">' + newItem.value + '</p><input type="button" class="delete-button" value = "Delete" onClick="deleteRow(this)">';
+    table.appendChild(div);
+    
+    console.log("here2");
+    
+    /*
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
-    row.insertCell(0).innerHTML= newItem.value;
-    row.insertCell(1).innerHTML= '<input type="button" value = "Delete" onClick="deleteRow(this)">';
+    row.insertCell(0).innerHTML= '<div class="new-item">' + newItem.value + '</div>';
+    row.insertCell(1).innerHTML= '<input type="button" class="delete-button" value = "Delete" onClick="deleteRow(this)">';
+    */
     
     // clear input value
     newItem.value="";

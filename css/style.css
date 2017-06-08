@@ -62,7 +62,7 @@ body {
   margin: 0 0 20px;
   padding: 10px 15px;
   box-sizing: border-box;
-  font-wieght: 400;
+  font-weight: 400;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -106,4 +106,33 @@ footer {
 .copyright {
     font-size: 14px;
     color: #AAAAAA;
+}
+
+.item-table {
+    display: flex;
+    width: 100%;
+}
+
+.item-table #newItem {
+    flex: 3;
+}
+
+.item-table .add-button{
+    flex: 1;
+}
+
+.item-table-history {
+    
+}
+
+.item-table-history .row{
+    display: flex;
+}
+
+.item-table-history .row .new-item {
+    flex: 3.8;
+}
+
+.item-table-history .row .delete-button{
+    flex: 1;
 }
