@@ -4,24 +4,75 @@ var tableData = [];
 var table = document.getElementById("eventTable");
 
 
-function setItems() {
+function selectItem1(object) {
     
-    var listOfItems = []
-    
-    
-    //TODO: figure out if how to access the item data correctly
-    for(int i = 0; i < listOfItems.length; i++){
-        var div = document.createElement('div');
-        div.className = 'row';
-        div.idName = listOfItems[i];
-        div.innerHTML= '<p class="new-item">' + newItem.value + '</p><input type="button" class="delete-button" value = "Delete" onClick="selectItem(this)">';
-        table.appendChild(div);
-    }
+    document.getElementById('sspan1').className = 'strikethrough';
     
     return false;
 }
 
-function selectItem(object) {
+function selectItem2(object) {
+    
+    document.getElementById('sspan2').className = 'strikethrough';
+    
+    return false;
+}
+function selectItem3(object) {
+    
+    document.getElementById('sspan3').className = 'strikethrough';
+    
+    return false;
+}
+function selectItem4(object) {
+    
+    document.getElementById('sspan4').className = 'strikethrough';
+    
+    return false;
+}
+function selectItem5(object) {
+    
+    document.getElementById('sspan5').className = 'strikethrough';
+    
+    return false;
+}
+function selectItem6(object) {
+    
+    document.getElementById('sspan6').className = 'strikethrough';
+    
+    return false;
+}
+
+function selectItem7(object) {
+    
+    document.getElementById('sspan7').className = 'strikethrough';
+    
+    return false;
+}
+
+function selectItem8(object) {
+    
+    document.getElementById('sspan8').className = 'strikethrough';
+    
+    return false;
+}
+
+function selectItem9(object) {
+    
+    document.getElementById('sspan9').className = 'strikethrough';
+    
+    return false;
+}
+
+function selectItem10(object) {
+    
+    document.getElementById('sspan10').className = 'strikethrough';
+    
+    return false;
+}
+
+function selectItem11(object) {
+    
+    document.getElementById('sspan11').className = 'strikethrough';
     
     return false;
 }

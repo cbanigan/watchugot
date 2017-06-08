@@ -27,11 +27,11 @@ def createEvent(eventName):
     return jsonify(data)
 
 
-@app.route("/event/<eventID>", methods=["GET"])
+@app.route("/event/<eventID>", methods=["GET", "POST"])
 def viewEvent():
     data = {"eventID": eventID,
            "eventItems": []}
-    return render_template("selection.html", "")
+    return send_static_file("selection.html")
 
 app.run()
 

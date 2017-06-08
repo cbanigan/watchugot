@@ -166,9 +166,9 @@ footer {
 
 .strikethrough {
 	display: inline-block;
-    color: grey;
+  color: grey;
 	position: relative;
-	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+	transition: all 0s cubic-bezier(.55, 0, .1, 1);
 }
 
 .strikethrough:after {
@@ -180,8 +180,8 @@ footer {
 	margin-top: -0.5em;
 	background: black;
 	transform-origin: center left;
-	animation: strikethrough 1s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
-	transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+	animation: strikethrough 0.5s 0s cubic-bezier(.55, 0, .1, 1) 1;
+	transition: transform 0s cubic-bezier(.55, 0, .1, 1);
 }
 
 @keyframes strikethrough {
