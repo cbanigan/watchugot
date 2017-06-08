@@ -24,18 +24,11 @@ function addItem() {
     tableData.push(newItem.value);
     
     // insert new row into table
-    
+
     var div = document.createElement('div');
     div.className = 'row';
     div.innerHTML= '<p class="new-item">' + newItem.value + '</p><input type="button" class="delete-button" value = "Delete" onClick="deleteRow(this)">';
     table.appendChild(div);
-    
-    /*
-    var rowCount = table.rows.length;
-    var row = table.insertRow(rowCount);
-    row.insertCell(0).innerHTML= '<div class="new-item">' + newItem.value + '</div>';
-    row.insertCell(1).innerHTML= '<input type="button" class="delete-button" value = "Delete" onClick="deleteRow(this)">';
-    */
     
     // clear input value
     newItem.value="";
@@ -74,7 +67,7 @@ function Ctrl($http) {
         
         
         // ADD LATER to http.post "+ "/" + eventItems"
-        $http.post(serverAddress + "addEvent/" + eventName).then(function(data) {
+        $http.post(serverAddress + "addEvent/" + eventName + "/" + JSON.stringfy(eventItems)).then(function(data) {
             console.log("Data from Server: " + JSON.stringify(data));
         }, function(err) {
             console.log("ERROR: " + JSON.stringify(err));
