@@ -17,7 +17,7 @@ def login(username, eventid):
 @app.route("/addEvent/<eventName>/<eventItems>", methods=["GET", "POST"])
 def createEvent(eventName):
     # print("ran")
-    const uuidV4 = require('uuid/v4');
+    uuidV4 = require('uuid/v4');
     
     data = {"eventName": eventName,
            "eventItems": eventItems.get_json(),
@@ -26,6 +26,12 @@ def createEvent(eventName):
     # return "ran"
     return jsonify(data)
 
+
+@app.route("/event/<eventID>", methods=["GET"])
+def viewEvent():
+    data = {"eventID": eventID,
+           "eventItems": []}
+    return render_template("selection.html", "")
 
 app.run()
 
