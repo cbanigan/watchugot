@@ -11,8 +11,17 @@
 //   }, "slow");
 // });
 
+// good resource for dynamic tables: http://www.mysamplecode.com/2012/04/generate-html-table-using-javascript.html
+
 var tableData = [];
 var table = document.getElementById("eventTable");
+
+var item = document.getElementById("newItem");
+item.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+        addItem();
+    }
+});
 
 function addItem() {
     // get new item from input
