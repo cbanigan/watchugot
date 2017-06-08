@@ -9,6 +9,13 @@ def login(username, eventid):
 			"event":eventid}
 	return jsonify(data)
 
+# @TODO: Convert event items to an array
+@app.route("/addEvent/<eventName>")
+def createEvent(eventName):
+    data = {"eventName": eventName}
+    return jsonify(data)
+
+
 app.run()
 
 # import socket
