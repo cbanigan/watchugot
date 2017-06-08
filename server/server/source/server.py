@@ -14,10 +14,15 @@ def login(username, eventid):
 	return jsonify(data)
 
 # @TODO: Convert event items to an array
-@app.route("/addEvent/<eventName>", methods=["GET", "POST"])
+@app.route("/addEvent/<eventName>/<eventItems>", methods=["GET", "POST"])
 def createEvent(eventName):
     # print("ran")
-    data = {"eventName": eventName}
+    const uuidV4 = require('uuid/v4');
+    
+    data = {"eventName": eventName,
+           "eventItems": eventItems.get_json(),
+           "eventID": uuidV4()}
+    
     # return "ran"
     return jsonify(data)
 
