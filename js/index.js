@@ -1,17 +1,5 @@
-// Toggle Function
-// $('.toggle').click(function(){
-  // Switches the Icon
-//   $(this).children('i').toggleClass('fa-pencil');
-//   // Switches the forms  
-//   $('.form').animate({
-//     height: "toggle",
-//     'padding-top': 'toggle',
-//     'padding-bottom': 'toggle',
-//     opacity: "toggle"
-//   }, "slow");
-// });
-
-// good resource for dynamic tables: http://www.mysamplecode.com/2012/04/generate-html-table-using-javascript.html
+// address of server
+var serverAddress = "http://192.168.21.48:8082/";
 
 var tableData = [];
 var table = document.getElementById("eventTable");
@@ -76,12 +64,43 @@ function deleteRow(object) {
     return false;
 }
 
-// add event for "Enter" button
-/*
-function (event) {
-    if (event.which == 13 || event.keyCode == 13) {
-        //add new row to table
-        var row = table.insertRow(tableSize);
-        tableSize++;
-    }
-};*/
+
+// functions for client-server communications
+
+angular.module("app", []).controller("Ctrl", Ctrl);
+
+function Ctrl($http) {
+	var vm = this;
+	vm.eventItems = [];
+	vm.eventName = "";
+
+    // add a new event to data
+    vm.addEvent = function(eventName) {
+        eventItems = tableData;
+        
+        
+        // ADD LATER to http.post "+ "/" + eventItems"
+        $http.post(serverAddress + "addEvent/" + eventName).then(function(data) {
+            console.log("Data from Server: " + JSON.stringify(data));
+        }, function(err) {
+            console.log("ERROR: " + JSON.stringify(err));
+        })  
+    };    
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
