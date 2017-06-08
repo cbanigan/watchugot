@@ -38,14 +38,10 @@ function addItem() {
     
     // insert new row into table
     
-    console.log("here1");
-    
     var div = document.createElement('div');
     div.className = 'row';
     div.innerHTML= '<p class="new-item">' + newItem.value + '</p><input type="button" class="delete-button" value = "Delete" onClick="deleteRow(this)">';
     table.appendChild(div);
-    
-    console.log("here2");
     
     /*
     var rowCount = table.rows.length;
@@ -74,6 +70,10 @@ function deleteRow(object) {
     tableData = tempData;
     
     return false;
+}
+
+function selectItem(object) {
+    
 }
 
 // add event for "Enter" button
