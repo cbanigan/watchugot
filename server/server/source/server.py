@@ -27,6 +27,12 @@ def createEvent(eventName):
     return jsonify(data)
 
 
+@app.route("/event/<eventID>", methods=["GET"])
+def viewEvent():
+    data = {"eventID": eventID,
+           "eventItems": []}
+    return render_template("selection.html", "")
+
 app.run()
 
 # import socket
