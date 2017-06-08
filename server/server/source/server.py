@@ -1,6 +1,10 @@
 from flask import Flask
 from flask import jsonify
+from flask_cors import CORS, cross_origin
 app = Flask(__name__)
+CORS(app)
+
+@app.route("/", methods=["POST"])
 
 @app.route("/login/<username>/<eventid>", methods=["GET", "POST"])
 def login(username, eventid):
@@ -8,6 +12,15 @@ def login(username, eventid):
 			"isLoggedIn": 1,
 			"event":eventid}
 	return jsonify(data)
+
+# @TODO: Convert event items to an array
+@app.route("/addEvent/<eventName>", methods=["GET", "POST"])
+def createEvent(eventName):
+    # print("ran")
+    data = {"eventName": eventName}
+    # return "ran"
+    return jsonify(data)
+
 
 app.run()
 
